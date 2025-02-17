@@ -1,6 +1,6 @@
 import { Logger } from '@nestjs/common';
 import { NextFunction, Request, Response } from 'express';
-import requestParser from '@utils/request-logger-parser';
+import requestParser from 'libs/utils/request-logger-parser';
 
 export default async function RequestLoggerMiddleware(
   req: Request,

@@ -11,6 +11,14 @@ class EnvironmentVariablesValidator {
   @ValidateIf((envValues) => envValues.AUTH_JWT_TOKEN_EXPIRES_IN)
   @IsString()
   AUTH_JWT_TOKEN_EXPIRES_IN: string;
+
+  @ValidateIf((envValues) => envValues.REFRESH_TOKEN)
+  @IsString()
+  REFRESH_TOKEN: string;
+
+  @ValidateIf((envValues) => envValues.AUTH_REFRESH_TOKEN_EXPIRES_IN)
+  @IsString()
+  AUTH_REFRESH_TOKEN_EXPIRES_IN: string;
 }
 
 export default registerAs<JwtConfig>('auth', () => {
@@ -18,5 +26,7 @@ export default registerAs<JwtConfig>('auth', () => {
   return {
     jwtSecretKey: process.env.AUTH_JWT_SECRET,
     jwtExpiresIn: process.env.AUTH_JWT_TOKEN_EXPIRES_IN,
+    refreshToken: process.env.REFRESH_TOKEN,
+    authRefreshTokenExpiresIn: process.env.AUTH_REFRESH_TOKEN_EXPIRES_IN,
   };
 });

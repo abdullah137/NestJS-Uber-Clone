@@ -71,7 +71,6 @@ export const generatePayment = async (payload: {
   }
 };
 
-
 export const generateDollarPayment = async (payload: {
   name: string;
   amount: number;
@@ -90,7 +89,7 @@ export const generateDollarPayment = async (payload: {
         currency: 'NGN',
         email: payload.email,
         name: payload.name,
-        account_bank: "058",
+        account_bank: '058',
         redirect_url: `${process.env.FRONTEND_DOMAIN}/dashboard`,
         customer: {
           email: payload.email,

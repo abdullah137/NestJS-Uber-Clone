@@ -1,4 +1,4 @@
-//TODO: CHANGE THE PATH FOR THE DATBASE
+//TODO: CHANGE THE PATH FOR THE DATABASE
 import { DatabaseConfig } from 'apps/auth/src/database/config/database-config.type';
 import { AppConfig } from './types/app.config.type';
 import { JwtConfig } from './types/jwt.config.type';
